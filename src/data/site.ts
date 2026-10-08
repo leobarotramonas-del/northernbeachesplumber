@@ -137,13 +137,34 @@ const rawAreas = [
   ['avalon-beach', 'Avalon Beach', '2107', '-33.6357,151.3299', 'team-fleet-wide', 'Antons team standing with three blue plumbing service vehicles', ['newport', 'mona-vale', 'warriewood'], 'Avalon Beach includes coastal homes, apartments, older cottages and properties on sloping, leafy blocks. Distance from parking can matter for equipment access.', 'Describe steps, steep driveways, locked gates, subfloor access and outside inspection openings. For managed properties, confirm who can authorise access and work.'],
 ] as const;
 
-export const areas = rawAreas.map(([slug, name, postcode, coords, image, alt, neighbours, intro, context]) => ({
-  slug, name, postcode, coords,
-  image: `/images/${image}.webp`, imageSmall: `/images/${image}-720.webp`, alt, neighbours, intro, context,
-  title: `Plumber ${name} NSW ${postcode} | Northern Beaches`,
-  description: `Call about plumbing in ${name} NSW ${postcode}: blocked drains, hot water, leaks, gas fitting and repairs. Confirm coverage for your address.`,
-  faqs: areaFaqs(name),
-}));
+const areaProcessMedia = {
+  manly: ['service-truck-action', 'Antons plumber preparing drain-clearing equipment beside a blue service vehicle'],
+  'dee-why': ['drain-cleaning-street-2', 'Drain-clearing equipment being used beside a Northern Beaches street'],
+  brookvale: ['service-truck-rear', 'Rear of an Antons service vehicle displaying its plumbing services'],
+  freshwater: ['hot-water-repair', 'Antons plumber completing pipework on an outdoor hot-water system'],
+  'curl-curl': ['drain-pipe-install-1', 'New drainage pipework installed in an excavated trench'],
+  narrabeen: ['drain-camera-backyard', 'Drain camera equipment being used at a backyard inspection point'],
+  collaroy: ['team-founder', 'Antons plumber standing in front of a blue plumbing service vehicle'],
+  'mona-vale': ['fleet-lineup', 'Three blue Antons plumbing vehicles lined up together'],
+  warriewood: ['trench-pipework', 'Underground drainage repair with pipework laid on gravel bedding'],
+  'frenchs-forest': ['team-fleet-portrait', 'Antons plumbing team standing with blue service vehicles'],
+  forestville: ['fleet-wide', 'Antons plumbing service vehicles ready for local work'],
+  belrose: ['drain-cleaning-street-1', 'Plumber operating drain-clearing equipment beside an Antons vehicle'],
+  newport: ['excavation-side-access', 'Antons plumber excavating beside a home to reach underground pipework'],
+  'avalon-beach': ['shower-repair', 'Antons plumber completing plumbing work inside a tiled shower'],
+} as const;
+
+export const areas = rawAreas.map(([slug, name, postcode, coords, image, alt, neighbours, intro, context]) => {
+  const [processImage, processAlt] = areaProcessMedia[slug];
+  return {
+    slug, name, postcode, coords,
+    image: `/images/${image}.webp`, imageSmall: `/images/${image}-720.webp`, alt, neighbours, intro, context,
+    processImage: `/images/${processImage}.webp`, processImageSmall: `/images/${processImage}-720.webp`, processAlt,
+    title: `Plumber ${name} NSW ${postcode} | Northern Beaches`,
+    description: `Call about plumbing in ${name} NSW ${postcode}: blocked drains, hot water, leaks, gas fitting and repairs. Confirm coverage for your address.`,
+    faqs: areaFaqs(name),
+  };
+});
 
 export const homeFaqs: Faq[] = [
   { question: 'Which Northern Beaches Suburbs Do You Cover?', answer: 'Suggested coverage includes Manly, Dee Why, Brookvale, Freshwater, Curl Curl, Narrabeen, Collaroy, Mona Vale, Warriewood, Frenchs Forest, Forestville, Belrose, Newport and Avalon Beach. Call with your full address to confirm current coverage.' },
