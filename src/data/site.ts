@@ -154,12 +154,30 @@ const areaProcessMedia = {
   'avalon-beach': ['shower-repair', 'Antons plumber completing plumbing work inside a tiled shower'],
 } as const;
 
+const areaHeroHooks = {
+  manly: 'Licensed plumbing help for Manly apartments, strata buildings, terraces and homes. We assess the accessible system, explain practical repair options and agree on the scope before work begins.',
+  'dee-why': 'Licensed plumbing help for Dee Why high-rise apartments, walk-up blocks, shops and houses, with careful fault assessment, clear access planning and repair options explained before work begins.',
+  brookvale: 'Licensed plumbing support for Brookvale industrial units, retail premises, apartments and homes. We plan around site access and trading needs, assess the fault and explain the practical next step.',
+  freshwater: 'Licensed plumbing help for Freshwater apartments, semis and homes on compact streets. We plan for parking and tight access, assess the symptoms carefully and explain repair options before agreed work begins.',
+  'curl-curl': 'Licensed plumbing help for Curl Curl homes, duplexes and renovated coastal properties. We consider slopes, outdoor drainage and access, then explain the findings and practical repair options.',
+  narrabeen: 'Licensed plumbing help for Narrabeen lakeside homes, apartments and mixed-use properties. We assess indoor and outdoor drainage conditions, plan for shared access and explain the next practical step.',
+  collaroy: 'Licensed plumbing help for Collaroy apartments and hillside homes. We plan for stairs, slopes, basement access and shared plumbing, with clear findings and repair options before work starts.',
+  'mona-vale': 'Licensed plumbing help for Mona Vale homes, apartments, medical and retail premises. We identify the affected building or service, assess accessible plumbing and agree on a clear repair scope.',
+  warriewood: 'Licensed plumbing help for Warriewood estates, apartments, commercial sites and established homes. We consider easements, landscaping and basement access before explaining practical repair options.',
+  'frenchs-forest': 'Licensed plumbing help for Frenchs Forest homes, renovations and precinct properties. We account for slopes, trees, longer pipe runs and access, then explain the practical repair path.',
+  forestville: 'Licensed plumbing help for Forestville homes, townhouses and sloping sites. We consider older pipe routes and under-house access, assess the fault and explain the agreed repair scope.',
+  belrose: 'Licensed plumbing help for Belrose homes, retirement living, retail and light-commercial properties. We plan around gates, shared facilities and outdoor pipe routes, then explain the next practical step.',
+  newport: 'Licensed plumbing help for Newport coastal homes, apartments and steep blocks. We plan for driveways, stairs and subfloor access, assess the accessible system and explain repair options clearly.',
+  'avalon-beach': 'Licensed plumbing help for Avalon Beach coastal homes, apartments and leafy sloping blocks. We plan for distance from parking, gates and subfloor access, then agree on a practical repair scope.',
+} as const;
+
 export const areas = rawAreas.map(([slug, name, postcode, coords, image, alt, neighbours, intro, context]) => {
   const [processImage, processAlt] = areaProcessMedia[slug];
   return {
     slug, name, postcode, coords,
     image: `/images/${image}.webp`, imageSmall: `/images/${image}-720.webp`, alt, neighbours, intro, context,
     processImage: `/images/${processImage}.webp`, processImageSmall: `/images/${processImage}-720.webp`, processAlt,
+    hook: areaHeroHooks[slug],
     title: `Plumber ${name} NSW ${postcode} | Northern Beaches`,
     description: `Call about plumbing in ${name} NSW ${postcode}: blocked drains, hot water, leaks, gas fitting and repairs. Confirm coverage for your address.`,
     faqs: areaFaqs(name),
