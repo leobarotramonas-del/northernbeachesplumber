@@ -1,7 +1,7 @@
 {
+  // Read by Cloudflare Builds after a Git push. Do not deploy from a local CLI.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "northern-beaches-plumber",
-  "account_id": "573ec16da82aec1b8076598a9bc90559",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist"

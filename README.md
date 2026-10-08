@@ -24,17 +24,19 @@ The production build is written to `dist`.
 
 ## Deployment
 
-The intended production hostname is `https://thenorthenbeachesplumber.com.au`. Build with `npm run build` and deploy the Worker with `npx wrangler deploy`.
+The intended production hostname is `https://thenorthenbeachesplumber.com.au`.
 
-### Automatic Cloudflare deployment
+This repository follows the same Git-connected Cloudflare deployment process as the Ryde project:
 
-The GitHub Actions workflow at `.github/workflows/deploy-cloudflare.yml` builds, validates and deploys the site whenever a commit is pushed to `main`. It can also be run manually from the repository's **Actions** tab.
+1. Edit and validate files locally.
+2. Commit the changes with Git.
+3. Push the commit with `git push origin main`.
+4. Cloudflare detects the new commit on `main`.
+5. Cloudflare builds and deploys the website automatically.
 
-Before the first automated deployment, create a Cloudflare API token with permission to edit Workers scripts, then add it to the GitHub repository under **Settings → Secrets and variables → Actions → New repository secret** using this exact name:
+A local commit does not deploy the website. Deployment begins only after the commit is pushed to `origin/main`. Do not run `wrangler deploy` locally and do not add a separate GitHub Actions deployment workflow, because Cloudflare owns the build and deployment process.
 
-`CLOUDFLARE_API_TOKEN`
-
-The Cloudflare account ID and Worker name are already defined in `wrangler.jsonc`; do not commit the API token to the repository.
+Automatic production deployments can be managed in **Cloudflare → Workers & Pages → Northern Beaches project → Settings → Builds → Branch control**. The production branch should be `main`.
 
 Cloudflare Workers static assets accept only relative paths in `_redirects`, so the `www` hostname redirect must be configured at the zone level rather than shipped as an asset rule:
 
