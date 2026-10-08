@@ -1,6 +1,7 @@
 ---
 import Brand from './Brand.astro';
 import GoogleRating from './GoogleRating.astro';
+import AvailabilityStatus from './AvailabilityStatus.astro';
 import { site } from '../data/site';
 ---
 <header class="site-header">
@@ -13,12 +14,13 @@ import { site } from '../data/site';
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <GoogleRating />
+    <div class="header-trust"><GoogleRating /><AvailabilityStatus /></div>
     <div class="header-call"><small>NSW Licence {site.licence}</small><a href={site.phoneHref}>Call {site.phoneDisplay}</a></div>
     <details class="mobile-menu">
       <summary aria-label="Open navigation menu"><span></span><span></span><span></span></summary>
       <nav aria-label="Mobile navigation">
-        <a href="/services/">Services</a><a href="/service-areas/">Service Areas</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+        <div class="mobile-menu__links"><a href="/services/">Services</a><a href="/service-areas/">Service Areas</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+        <div class="mobile-menu__trust"><GoogleRating /><AvailabilityStatus /></div>
       </nav>
     </details>
   </div>

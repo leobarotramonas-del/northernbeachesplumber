@@ -11,6 +11,7 @@ The site uses an established trade-service visual language: near-black surfaces,
 - Backgrounds: `#090B0F`, `#11151C` and `#191F29`.
 - Text: `#F5F7FA` with `#BAC5D4` for supporting copy.
 - Accent: `#1463DF`; dark-background links use `#78B5FF`.
+- Availability status uses `#22C55E` as a tightly scoped semantic exception to the blue accent.
 - Borders: `#303B4B`.
 - Cards use a 14px radius; controls use an 8px radius; the persistent mobile call action is pill-shaped.
 - Section separation is compact, while internal padding preserves readable rhythm.
@@ -39,4 +40,4 @@ Motion is limited to short hover transforms, button feedback, navigation underli
 
 ## Content Rules
 
-Visible copy uses “Northern Beaches”; canonical URLs preserve the supplied `thenorthenbeachesplumber.com.au` spelling. Claims avoid invented response times, pricing, locations, review scores, operating hours, equipment or experience. Suggested suburb coverage is explicitly marked for business confirmation.
+Visible copy uses “Northern Beaches”; canonical URLs preserve the supplied `thenorthenbeachesplumber.com.au` spelling. Claims avoid invented response times, pricing, locations, review scores, equipment or experience. User-confirmed 24/7 phone availability may be shown as a compact green status. Suggested suburb coverage is explicitly marked for business confirmation.

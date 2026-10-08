@@ -1,0 +1,7 @@
+---
+import { site } from '../data/site';
+---
+<span class="availability-status" role="status" aria-label={`${site.availability}. Open for calls now.`}>
+  <span class="availability-status__dot" aria-hidden="true"></span>
+  <span><strong>Open</strong> · {site.availability}</span>
+</span>

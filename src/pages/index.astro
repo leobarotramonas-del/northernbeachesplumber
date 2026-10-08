@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResponsiveImage from '../components/ResponsiveImage.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CtaBand from '../components/CtaBand.astro';
+import GoogleRating from '../components/GoogleRating.astro';
+import AvailabilityStatus from '../components/AvailabilityStatus.astro';
 import { areas, homeFaqs, reviews, services, site } from '../data/site';
 
 const title = 'The Northern Beaches Plumber | Licensed Plumbing';
@@ -15,6 +17,7 @@ const faqSchema = { '@type': 'FAQPage', '@id': `${site.url}/#faq`, mainEntity: h
       <div class="home-hero__copy">
         <h1 id="home-title">The Northern Beaches’ Local Plumber</h1>
         <p class="home-hero__lede">Clear advice, licensed plumbing and practical next steps for homes and properties across Sydney’s Northern Beaches.</p>
+        <div class="home-hero__trust"><GoogleRating /><AvailabilityStatus /></div>
         <div class="home-hero__actions"><a class="button button--blue" href={site.phoneHref}>Call {site.phoneDisplay}</a><a class="button button--ghost" href="/services/">Explore Our Services</a></div>
         <p class="licence-line">Operated by {site.operator} · NSW licence {site.licence}</p>
       </div>

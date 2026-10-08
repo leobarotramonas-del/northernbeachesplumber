@@ -7,6 +7,7 @@ export const site = {
   url: 'https://thenorthenbeachesplumber.com.au',
   place: 'Northern Beaches, Sydney, NSW',
   reviewSourceUrl: 'https://antonsplumbingandgas.com.au/suburb/plumber-north-kellyville/',
+  availability: '24/7 available',
 } as const;
 
 export type Faq = { question: string; answer: string };

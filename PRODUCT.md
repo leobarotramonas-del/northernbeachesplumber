@@ -31,7 +31,7 @@ Visitors commonly arrive from search on mobile, navigate between services and su
 - Required page architecture, trailing slashes, internal links, sitemaps, robots rules and structured data are defined in the supplied build brief.
 - Customer-facing language is Australian English.
 - Suggested suburb coverage, postcodes and actual availability remain subject to business verification before publishing.
-- The site must not invent completed jobs, local offices, response times, equipment, review scores, addresses, opening hours or other business claims.
+- The site must not invent completed jobs, local offices, response times, equipment, review scores, addresses or other business claims.
 - Draft blog posts must never appear in public routes or sitemaps.
 - Deployment configuration may be prepared, but publishing requires a separate user request.
 
@@ -51,7 +51,7 @@ Visitors commonly arrive from search on mobile, navigate between services and su
 - Structural and technical reference: `../the-hills-district-plumber/`.
 - Authorised source assets are available in the reference project, including the Antons hero video, poster, service photography and team imagery.
 - The supplied brief includes summarised customer feedback and asks that only genuine reviews with accurate attribution and source links be presented. The site therefore labels inherited review wording as summaries and links to the existing Google review search source.
-- No verified street address, opening hours, rating, review count or suburb-specific job history was supplied.
+- The user confirmed 24/7 phone availability on 8 October 2026. No verified street address, rating, review count or suburb-specific job history was supplied.
 
 ## Product Principles
 

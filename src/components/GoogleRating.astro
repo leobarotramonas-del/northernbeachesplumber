@@ -4,8 +4,8 @@ interface Props { dark?: boolean }
 const { dark = false } = Astro.props;
 ---
 <a class:list={['google-rating', { 'google-rating--dark': dark }]} href={site.reviewSourceUrl} target="_blank" rel="noopener noreferrer" aria-label="Read customer feedback for Antons Plumbing on Google">
-  <span class="google-rating__g" aria-hidden="true">G</span>
-  <span><strong>Customer Reviews</strong><span>View sourced feedback</span></span>
+  <span class="google-rating__logo" aria-hidden="true"></span>
+  <span><strong>Google Customer Reviews</strong><span>View sourced feedback</span></span>
 </a>
 
 
