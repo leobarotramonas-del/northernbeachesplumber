@@ -1,0 +1,12 @@
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://thenorthenbeachesplumber.com.au/sitemap.xml
+
+

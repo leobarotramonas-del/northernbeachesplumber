@@ -1,0 +1,36 @@
+---
+interface Props { name: string; postcode: string; coords: string }
+const { name, postcode, coords } = Astro.props;
+const query = encodeURIComponent(`${name} NSW ${postcode}`);
+const [latitude, longitude] = coords.split(',');
+const preview = `https://staticmap.openstreetmap.de/staticmap.php?center=${latitude},${longitude}&zoom=13&size=800x500&maptype=mapnik&markers=${latitude},${longitude},blue-pushpin`;
+const externalMap = `https://www.google.com/maps/search/?api=1&query=${query}`;
+---
+<div class="map-wrap">
+  <div class="map-placeholder" data-map data-query={query}>
+    <img src={preview} width="800" height="500" loading="lazy" decoding="async" alt={`OpenStreetMap preview centred on ${name} NSW ${postcode}`} />
+    <div class="map-placeholder__prompt" data-map-prompt>
+      <h2>{name} {postcode}</h2>
+      <p>Load the interactive map only when you need it.</p>
+      <button type="button">Load Interactive Map</button>
+    </div>
+  </div>
+  <p class="map-attribution">Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>. <a href={externalMap} target="_blank" rel="noopener noreferrer">Open {name} in Google Maps</a>.</p>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-map]').forEach((map) => {
+    const button = map.querySelector<HTMLButtonElement>('button');
+    button?.addEventListener('click', () => {
+      const query = map.dataset.query;
+      const iframe = document.createElement('iframe');
+      iframe.title = `Interactive map of ${decodeURIComponent(query ?? '')}`;
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.src = `https://www.google.com/maps?q=${query}&output=embed`;
+      iframe.addEventListener('load', () => map.classList.add('map-placeholder--loaded'), { once: true });
+      map.append(iframe);
+      button.disabled = true;
+      button.textContent = 'Loading Map';
+    }, { once: true });
+  });
+</script>

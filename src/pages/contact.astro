@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { areas, site } from '../data/site';
+---
+<BaseLayout title="Contact The Northern Beaches Plumber" description="Call The Northern Beaches Plumber on 0493 824 176 about drains, hot water, leaks, gas fitting, urgent faults and plumbing repairs." canonicalPath="/contact/">
+  <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Contact</span></nav>
+  <PageHero eyebrow="Contact the team" title="Tell Us What Is Happening at the Property" intro="Share the full address, affected fixtures, when the issue began and any parking, strata or access information. We will confirm coverage and current availability." image="/images/team-preparing-tools.webp" imageSmall="/images/team-preparing-tools-720.webp" imageAlt="Antons plumber selecting tools from an organised service vehicle" />
+  <section class="content-section wrap"><div class="content-grid"><div><h2>Call {site.phoneDisplay}</h2><p>Explain the plumbing problem and any immediate safety concern. An arrival time is not promised until the address, fault and current availability are reviewed.</p><a class="button button--blue" href={site.phoneHref}>Call the Plumbing Team</a><p><strong>{site.operator}</strong><br />NSW contractor licence {site.licence}</p></div><div><h2>Suggested Service Areas</h2><ul class="check-list">{areas.map((area) => <li><a href={`/service-areas/${area.slug}/`}>{area.name} {area.postcode}</a></li>)}</ul></div></div></section>
+</BaseLayout>
+
+
