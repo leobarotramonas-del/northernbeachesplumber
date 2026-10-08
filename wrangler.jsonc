@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "northern-beaches-plumber",
+  "account_id": "573ec16da82aec1b8076598a9bc90559",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist"
