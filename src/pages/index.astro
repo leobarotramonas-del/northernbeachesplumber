@@ -15,7 +15,7 @@ const faqSchema = { '@type': 'FAQPage', '@id': `${site.url}/#faq`, mainEntity: h
   <section class="home-hero" aria-labelledby="home-title">
     <div class="home-hero__grid wrap">
       <div class="home-hero__copy">
-        <h1 id="home-title">The Northern Beaches’ Local Plumber</h1>
+        <h1 id="home-title"><span>The Northern Beaches’</span><span>Local Plumber</span></h1>
         <p class="home-hero__lede">Clear advice, licensed plumbing and practical next steps for homes and properties across Sydney’s Northern Beaches.</p>
         <div class="home-hero__trust"><GoogleRating /><AvailabilityStatus /></div>
         <div class="home-hero__actions"><a class="button button--blue" href={site.phoneHref}>Call {site.phoneDisplay}</a><a class="button button--ghost" href="/services/">Explore Our Services</a></div>
@@ -33,7 +33,7 @@ const faqSchema = { '@type': 'FAQPage', '@id': `${site.url}/#faq`, mainEntity: h
   <section class="local-strip"><div class="local-strip__inner wrap"><div><h2>Need a Northern Beaches Local Plumber?</h2><p>Tell us the address, property type and what is happening.</p></div><a class="button button--blue" href={site.phoneHref}>Call {site.phoneDisplay}</a></div></section>
 
   <section class="home-section wrap" aria-labelledby="services-title">
-    <div class="section-heading"><h2 id="services-title">Local Plumbing Help Across the Northern Beaches</h2><p>Choose the service that best matches the symptoms. Each guide explains what to look for, how the problem is assessed and what to expect when work is arranged.</p></div>
+    <div class="section-heading"><h2 id="services-title"><span>Local Plumbing Help</span><span>Across the Northern Beaches</span></h2><p>Choose the service that best matches the symptoms. Each guide explains what to look for, how the problem is assessed and what to expect when work is arranged.</p></div>
     <div class="service-grid">{services.map((service) => <article class="service-card"><ResponsiveImage src={service.image} small={service.imageSmall} alt={service.alt} width={1440} height={900} /><div class="service-card__body"><span class="service-card__label">{service.short}</span><h3>{service.name}</h3><p>{service.intro}</p><a href={`/services/${service.slug}/`}>Explore {service.name} Services</a></div></article>)}</div>
   </section>
 

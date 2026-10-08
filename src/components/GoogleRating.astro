@@ -3,9 +3,12 @@ import { site } from '../data/site';
 interface Props { dark?: boolean }
 const { dark = false } = Astro.props;
 ---
-<a class:list={['google-rating', { 'google-rating--dark': dark }]} href={site.reviewSourceUrl} target="_blank" rel="noopener noreferrer" aria-label="Read customer feedback for Antons Plumbing on Google">
+<a class:list={['google-rating', { 'google-rating--dark': dark }]} href={site.reviewSourceUrl} target="_blank" rel="noopener noreferrer" aria-label="5-star rated on Google. Read customer reviews for Antons Plumbing">
   <span class="google-rating__logo" aria-hidden="true"></span>
-  <span><strong>Google Customer Reviews</strong><span>View sourced feedback</span></span>
+  <span class="google-rating__copy">
+    <strong>5-star rated on Google</strong>
+    <span class="google-rating__meta"><span class="google-rating__stars" aria-hidden="true">★★★★★</span><span>Customer reviews</span></span>
+  </span>
 </a>
 
 
