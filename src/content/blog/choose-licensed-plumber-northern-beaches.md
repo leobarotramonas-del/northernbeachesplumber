@@ -1,7 +1,10 @@
 ---
-title: "How to Choose a Licensed Northern Beaches Plumber"
-description: "Use this practical checklist to compare licensed Northern Beaches plumbers, clarify the work and prepare for a confident booking decision."
+title: "Before You Book a Plumber: Six Questions Worth Asking"
+description: "The questions we would ask before letting anyone work on our own plumbing—from licence checks to scope, access, testing and warranties."
+seoTitle: "Licensed Plumber Northern Beaches | What to Check"
+seoDescription: "Choosing a licensed Northern Beaches plumber? Use six practical questions to compare the licence, assessment, work scope, testing and warranties."
 publishDate: 2026-10-09
+updatedDate: 2026-10-09
 author: "The Northern Beaches Plumber"
 category: "Hiring a Plumber"
 image: "/images/team-fleet-landscape.webp"
@@ -11,55 +14,62 @@ relatedSuburbs: ["manly", "dee-why", "mona-vale"]
 draft: false
 ---
 
-When water is leaking or a drain has stopped moving, it is tempting to book the first number you find. A few focused checks can help you choose a licensed Northern Beaches plumber whose scope, communication and experience fit the job. The lowest headline price is not always the clearest or most complete option.
+When water is spreading or a toilet will not drain, comparing plumbers can feel like one more problem you do not have time for. We still believe six questions are worth asking. They are the same checks we would make before letting someone work on our own property: who is responsible, what has actually been assessed, and what are we authorising?
 
-The Northern Beaches Plumber is operated by Antons Enterprises Pty Ltd under NSW contractor licence 210933C. We ask about the property and symptoms, assess the accessible system and explain the proposed scope before agreed work proceeds.
+The Northern Beaches Plumber is operated by Antons Enterprises Pty Ltd under NSW contractor licence 210933C. This is how we think a clear plumbing booking should work.
 
-### Confirm the licence and business details
+### 1. Whose licence covers the work?
 
-Plumbing, draining and gasfitting are regulated trades in NSW. Ask for the contractor’s name and licence number, then confirm the record rather than relying only on a website badge or vehicle sign. Service NSW provides an official [builder and tradesperson licence check](https://www.service.nsw.gov.au/transaction/check-a-builder-or-tradesperson-licence) that can be searched by licence number, name, business or location.
+Ask for the legal contractor name and licence number, not only a trading name. Plumbing, draining and gasfitting are regulated in NSW, and the licence should match the type of work being offered. Service NSW provides an official [builder and tradesperson licence check](https://www.service.nsw.gov.au/transaction/check-a-builder-or-tradesperson-licence) searchable by licence number, name, business or location.
 
-Before booking, confirm:
+We would confirm:
 
-- the legal business or contractor name;
-- the licence number and relevant category of work;
-- who will attend and how the booking will be confirmed;
-- a working phone number and contact details; and
-- whether your address is within current service coverage.
+- the business or contractor name;
+- the licence number and relevant category;
+- who will attend;
+- a working contact number; and
+- whether the property is inside current service coverage.
 
-Gas work needs particular care. NSW Fair Trading states that gasfitting must be performed by an appropriately licensed person and outlines certificate requirements in its [gasfitter guidance](https://www.fairtrading.nsw.gov.au/housing-and-property/building-and-renovating/preparing-to-build-and-renovate/using-a-gasfitter).
+Gas work deserves an extra check. NSW Fair Trading explains licensing and certificate requirements in its [guidance on using a gasfitter](https://www.fairtrading.nsw.gov.au/housing-and-property/building-and-renovating/preparing-to-build-and-renovate/using-a-gasfitter).
 
-### Compare the assessment, not just the price
+### 2. What has been assessed—and what has not?
 
-A useful plumbing proposal should connect the visible symptom to an assessment and a defined scope. Ask what has been observed, what remains uncertain and what the proposed work includes. If further investigation may be needed, find out what would trigger that step.
+We are cautious when a complex concealed fault receives a definite diagnosis before inspection. Photos and a good phone description help us prepare, but they do not reveal every buried pipe, damaged joint or internal component.
 
-Questions worth asking include:
+A plumber should be able to separate observed facts from a working theory. Ask what evidence supports the recommendation, what remains uncertain and whether another inspection step could change the scope.
 
-- Is the quote for investigation, repair or both?
-- Which parts, equipment and access work are included?
-- Could another trade, strata approval or excavation be required?
-- How will additional work be approved?
-- What testing will be completed after the repair?
-- What product and workmanship warranties apply?
+### 3. What exactly am I authorising?
 
-Be cautious with an exact diagnosis made before anyone has inspected a complex or concealed fault. Photos and a clear description help with planning, but access, pipe condition and the actual cause can change the required work.
+A useful scope names the work rather than hiding behind “fix plumbing”. We want customers to know whether they are approving investigation, clearing, repair, replacement or a combination.
 
-### Look for service experience that matches the fault
+Ask these questions before work expands:
 
-The right experience depends on the problem. Recurring drainage symptoms may require controlled clearing and CCTV inspection, while a hot-water fault requires assessment of the unit, valves, connections and energy source. Hidden leaks call for evidence-led testing before surfaces are disturbed.
+- Are parts and equipment included?
+- Is access, excavation or making good included?
+- Could another trade or strata approval be required?
+- How will additional work be explained and approved?
+- What will be tested when the work is complete?
 
-Review our [plumbing services](/services/) to match the symptom with the relevant service. You can read about [blocked drain clearing](/services/blocked-drains/), [hot-water repairs and replacement planning](/services/hot-water-systems/) and [everyday plumbing repairs](/services/plumbing-repairs/) before calling.
+The cheapest headline figure is not useful when it leaves the essential part of the job undefined.
 
-Local knowledge is valuable because access shapes the job. Apartments in [Manly](/service-areas/manly/) or [Dee Why](/service-areas/dee-why/) may require strata contacts, basement entry and shared-service checks. Larger properties around [Mona Vale](/service-areas/mona-vale/) may have longer distances between parking, buildings and external services. A plumber should ask about these conditions before selecting equipment or confirming the visit.
+### 4. Does the plumber’s experience match the fault?
 
-### Prepare for a clearer booking
+Different symptoms call for different assessment habits. A recurring drain backup may need controlled clearing followed by inspection. A hot-water fault requires the unit, valves, connections and energy source to be considered together. A hidden leak needs evidence before surfaces are opened.
 
-Give the complete address, property type, affected fixtures and a short timeline. Mention active water, odours, loss of hot water, gas concerns or impacts on neighbouring lots. Share useful photos, but never enter an unsafe area to take them.
+Our [service overview](/services/) helps customers choose the right starting point. It links directly to [blocked drain clearing](/services/blocked-drains/), [hot-water assessment](/services/hot-water-systems/) and [general plumbing repairs](/services/plumbing-repairs/).
 
-Also explain parking limits, stairs, locked gates, pets, tenancy arrangements and any strata or site-contact requirements. Good preparation does not replace an on-site assessment; it helps the plumber arrive with better context.
+### 5. Has anyone asked about the property?
 
-### Choose clear, licensed plumbing help
+Access is part of the work. In [Manly](/service-areas/manly/) and [Dee Why](/service-areas/dee-why/), apartment jobs may involve a strata contact, loading restrictions, basement parking and shared services. On a larger [Mona Vale](/service-areas/mona-vale/) property, the affected building or outside access point may sit well away from the driveway.
 
-Choose a plumber who can identify the licensed business, explain the assessment and define what you are authorising. You should be able to ask questions and understand the next step without pressure or unsupported promises.
+When we book a job, we ask about stairs, gates, pets, parking, tenancy arrangements and who can approve access. Those questions help us plan honestly instead of discovering preventable obstacles at the door.
 
-Learn more [about our licensed plumbing team](/about/) or [contact The Northern Beaches Plumber](/contact/). To discuss a job, call [0493 824 176](tel:+61493824176). Calls are accepted 24/7, with current coverage and availability confirmed after the address and fault are reviewed.
+### 6. How will the result be explained?
+
+After an assessment or repair, you should know what was found, what work was completed and whether any limitation or follow-up remains. Ask what testing applies and which product or workmanship warranties cover the agreed work. A confident answer should be specific enough to understand without promising an outcome the plumber cannot guarantee.
+
+### What we believe a good booking feels like
+
+You should know the licensed business behind the work, the purpose of the visit and how decisions will be made if the scope changes. Clear does not mean complicated. It means you can repeat back what happens next.
+
+Learn more [about our plumbing team](/about/) or [contact The Northern Beaches Plumber](/contact/). To discuss a job, call [0493 824 176](tel:+61493824176). Calls are accepted 24/7, with current coverage and availability confirmed after we review the address and fault.

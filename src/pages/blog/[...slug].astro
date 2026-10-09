@@ -23,7 +23,7 @@ const schema = [
 const relatedServices = (post.data.relatedServices ?? []).map((slug) => services.find((service) => service.slug === slug)).filter(Boolean);
 const relatedAreas = (post.data.relatedSuburbs ?? []).map((slug) => areas.find((area) => area.slug === slug)).filter(Boolean);
 ---
-<BaseLayout title={post.data.title} description={post.data.description} canonicalPath={path} schema={schema} image={post.data.image} pageType="article" publishedTime={published} modifiedTime={modified}>
+<BaseLayout title={post.data.seoTitle ?? post.data.title} description={post.data.seoDescription ?? post.data.description} canonicalPath={path} schema={schema} image={post.data.image} pageType="article" publishedTime={published} modifiedTime={modified}>
   <article>
     <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span aria-current="page">{post.data.title}</span></nav>
     <header class="article-header"><div class="wrap"><h1>{post.data.title}</h1><p class="article-header__description">{post.data.description}</p><div class="article-meta"><span>{post.data.category}</span><time datetime={published}>Published {formatDate(post.data.publishDate)}</time>{post.data.updatedDate && <time datetime={modified}>Updated {formatDate(post.data.updatedDate)}</time>}<span>By {post.data.author}</span></div></div></header>

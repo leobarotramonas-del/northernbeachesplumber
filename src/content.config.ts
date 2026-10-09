@@ -6,6 +6,8 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string().min(30).max(60),
     description: z.string().min(100).max(150),
+    seoTitle: z.string().min(30).max(60).optional(),
+    seoDescription: z.string().min(100).max(150).optional(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('The Northern Beaches Plumber'),
