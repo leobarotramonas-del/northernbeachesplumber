@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
 ---
-<BaseLayout title="Website Terms | Northern Beaches Plumber" description="Read the website terms for The Northern Beaches Plumber, including general information, service availability and external link conditions." canonicalPath="/terms/">
+<BaseLayout title="Website Terms | Northern Beaches Plumber" description="Read the website terms for Antons plumbing information, Northern Beaches service availability, external links and property-specific advice." canonicalPath="/terms/">
   <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Website Terms</span></nav>
   <article class="legal"><h1>Website Terms</h1><p>Last updated 8 October 2026.</p><p>This website provides general information about plumbing services offered by {site.operator}, NSW contractor licence {site.licence}.</p><h2>No Diagnosis from Website Content</h2><p>Website information is general and does not replace an inspection or professional advice about a specific property. The cause and scope of a plumbing issue may differ from the visible symptoms.</p><h2>Availability</h2><p>Service coverage and attendance are confirmed after the address, job details and current availability are reviewed. The website does not promise an arrival time.</p><h2>External Links</h2><p>Links to reviews, maps or other external services are provided for convenience. Their availability and content are controlled by the respective provider.</p><h2>Contact</h2><p>Call <a href={site.phoneHref}>{site.phoneDisplay}</a> with questions about these terms.</p></article>
 </BaseLayout>

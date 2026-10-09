@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { areas, services } from '../../data/site';
 ---
-<BaseLayout title="Northern Beaches Plumbing Service Areas" description="Explore suggested Northern Beaches plumbing coverage from Manly and Dee Why to Mona Vale, Newport, Avalon Beach and nearby suburbs." canonicalPath="/service-areas/">
+<BaseLayout title="Northern Beaches Plumber Service Areas | Antons" description="Find licensed plumbing services across the Northern Beaches, from Manly and Dee Why to Mona Vale, Newport, Avalon Beach and nearby suburbs." canonicalPath="/service-areas/" image="/images/fleet-lineup.webp" imageAlt="Four blue Antons plumbing service vehicles parked together">
   <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Service Areas</span></nav>
   <PageHero eyebrow="Northern Beaches service areas" title="Plumbing Across the Northern Beaches" intro="Explore the suggested service areas below for blocked drains, hot water, leaks, gas fitting and repairs. Call with your full address to confirm current coverage." image="/images/fleet-lineup.webp" imageSmall="/images/fleet-lineup-720.webp" imageAlt="Four blue Antons plumbing service vehicles parked together" />
   <section class="directory wrap"><div class="card-list">{areas.map((area) => <a class="route-card" href={`/service-areas/${area.slug}/`}><span class="route-card__label">Northern Beaches · {area.postcode}</span><h2>{area.name}</h2><p>{area.intro}</p><strong>View Plumbing Services in {area.name}</strong></a>)}</div></section>

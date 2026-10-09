@@ -14,11 +14,12 @@ const neighbours = area.neighbours
   .map((slug) => areas.find((candidate) => candidate.slug === slug))
   .filter((candidate): candidate is NonNullable<typeof candidate> => Boolean(candidate));
 const schema = [
+  { '@type': 'Service', '@id': `${site.url}${path}#plumbing-service`, name: `Plumbing services in ${area.name} NSW ${area.postcode}`, serviceType: 'Plumbing', description: area.description, provider: { '@id': `${site.url}/#business` }, areaServed: { '@type': 'Place', name: `${area.name} NSW ${area.postcode}`, url: `${site.url}${path}` } },
   { '@type': 'BreadcrumbList', '@id': `${site.url}${path}#breadcrumb`, itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` }, { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${site.url}/service-areas/` }, { '@type': 'ListItem', position: 3, name: area.name, item: `${site.url}${path}` }] },
   { '@type': 'FAQPage', '@id': `${site.url}${path}#faq`, mainEntity: area.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
 ];
 ---
-<BaseLayout title={area.title} description={area.description} canonicalPath={path} schema={schema} image={area.image}>
+<BaseLayout title={area.title} description={area.description} canonicalPath={path} schema={schema} image={area.image} imageAlt={area.alt}>
   <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/service-areas/">Service Areas</a><span>/</span><span aria-current="page">{area.name}</span></nav>
   <PageHero eyebrow={`${area.name} NSW ${area.postcode}`} title={`Plumber in ${area.name}`} intro={area.hook} image={area.image} imageSmall={area.imageSmall} imageAlt={area.alt} />
   <section class="content-section wrap"><div class="detail-copy"><h2>Useful Property and Access Details</h2><p>{area.context}</p><p>Call with the full street address so coverage and current availability can be confirmed. We do not promise attendance or an arrival time before those details are reviewed.</p><div class="area-facts"><div><strong>Suburb</strong><span>{area.name}</span></div><div><strong>Postcode</strong><span>{area.postcode}</span></div><div><strong>Licence</strong><span>{site.licence}</span></div></div></div></section>

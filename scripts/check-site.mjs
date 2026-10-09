@@ -16,6 +16,8 @@ const errors = [];
 const canonicalBase = 'https://thenorthenbeachesplumber.com.au';
 const pages = new Map();
 const incomingLinks = new Map();
+const titleOwners = new Map();
+const descriptionOwners = new Map();
 const strip = (value) => value.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 const attr = (html, tag, name) => [...html.matchAll(new RegExp(`<${tag}\\b[^>]*\\b${name}=["']([^"']*)["'][^>]*>`, 'gi'))].map((match) => match[1]);
 
@@ -29,6 +31,12 @@ for (const file of htmlFiles) {
   const canonical = html.match(/<link rel="canonical" href="([^"]*)"/i)?.[1] ?? '';
   const expected = new URL(urlPath, canonicalBase).toString();
   const is404 = urlPath === '/404/';
+  const titlePaths = titleOwners.get(title) ?? [];
+  titlePaths.push(urlPath);
+  titleOwners.set(title, titlePaths);
+  const descriptionPaths = descriptionOwners.get(description) ?? [];
+  descriptionPaths.push(urlPath);
+  descriptionOwners.set(description, descriptionPaths);
   if (title.length < 30 || title.length > 60) errors.push(`${urlPath}: title length ${title.length}`);
   if (description.length < 100 || description.length > 150) errors.push(`${urlPath}: description length ${description.length}`);
   if (canonical !== expected) errors.push(`${urlPath}: canonical ${canonical} should be ${expected}`);
@@ -46,10 +54,16 @@ for (const file of htmlFiles) {
   if (new Set(sources).size !== sources.length) errors.push(`${urlPath}: duplicate content image`);
   if (/pages\.dev|workers\.dev|localhost|127\.0\.0\.1/i.test(html)) errors.push(`${urlPath}: preview URL leaked into HTML`);
   if (!html.includes('"@type":"Plumber"') || !html.includes('"@type":"WebSite"') || !html.includes('"@type":"WebPage"')) errors.push(`${urlPath}: missing required schema node`);
+  if (!html.includes(`<meta name="author" content="Antons Enterprises Pty Ltd">`)) errors.push(`${urlPath}: missing author metadata`);
+  for (const property of ['og:title', 'og:description', 'og:url', 'og:image', 'og:image:alt']) if (!html.includes(`property="${property}"`)) errors.push(`${urlPath}: missing ${property}`);
+  for (const name of ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt']) if (!html.includes(`name="${name}"`)) errors.push(`${urlPath}: missing ${name}`);
   if (is404 && !html.includes('noindex,nofollow')) errors.push('/404/: missing noindex,nofollow');
   const visible = strip(html).toLowerCase();
   for (const us of [' color ', ' neighborhood ', ' license #', ' organized ', ' center ']) if (visible.includes(us)) errors.push(`${urlPath}: possible US spelling ${us.trim()}`);
 }
+
+for (const [title, owners] of titleOwners) if (title && owners.length > 1) errors.push(`duplicate title on ${owners.join(', ')}: ${title}`);
+for (const [description, owners] of descriptionOwners) if (description && owners.length > 1) errors.push(`duplicate description on ${owners.join(', ')}`);
 
 for (const [urlPath, html] of pages) {
   for (const href of attr(html, 'a', 'href')) {

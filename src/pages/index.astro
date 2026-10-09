@@ -7,11 +7,11 @@ import GoogleRating from '../components/GoogleRating.astro';
 import AvailabilityStatus from '../components/AvailabilityStatus.astro';
 import { areas, homeFaqs, reviews, services, site } from '../data/site';
 
-const title = 'The Northern Beaches Plumber | Licensed Plumbing';
-const description = 'Licensed plumbing across Sydney’s Northern Beaches for blocked drains, hot water, leaks, gas fitting and repairs. Call to confirm local coverage.';
+const title = 'Northern Beaches Plumber | Licensed Local Plumbing';
+const description = 'Licensed Northern Beaches plumbers for blocked drains, hot water, leaks, gas fitting and household repairs. Call Antons on 0493 824 176.';
 const faqSchema = { '@type': 'FAQPage', '@id': `${site.url}/#faq`, mainEntity: homeFaqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
 ---
-<BaseLayout title={title} description={description} canonicalPath="/" schema={[faqSchema]} image="/images/service-truck-action.webp">
+<BaseLayout title={title} description={description} canonicalPath="/" schema={[faqSchema]} image="/images/service-truck-action.webp" imageAlt="Antons plumber preparing equipment on a blue plumbing service vehicle">
   <section class="home-hero" aria-labelledby="home-title">
     <div class="home-hero__grid wrap">
       <div class="home-hero__copy">

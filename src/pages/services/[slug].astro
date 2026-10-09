@@ -16,7 +16,7 @@ const schema = [
   { '@type': 'FAQPage', '@id': `${site.url}${path}#faq`, mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
 ];
 ---
-<BaseLayout title={service.title} description={service.description} canonicalPath={path} schema={schema} image={service.image}>
+<BaseLayout title={service.title} description={service.description} canonicalPath={path} schema={schema} image={service.image} imageAlt={service.alt}>
   <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span><span aria-current="page">{service.name}</span></nav>
   <PageHero eyebrow={service.keyword} title={service.keyword} intro={service.intro} image={service.image} imageSmall={service.imageSmall} imageAlt={service.alt} />
   <section class="content-section wrap service-overview"><div class="content-grid"><div class="detail-copy"><h2>What Is {service.name}?</h2><p>{service.overview}</p><p>Across the Northern Beaches, the Antons team assesses the visible symptoms, accessible plumbing and property conditions before recommending work.</p></div><div class="service-scope"><h3>{service.name} Services</h3><ul class="check-list">{service.details.map((item) => <li>{item}</li>)}</ul></div></div></section>

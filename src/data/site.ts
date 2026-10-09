@@ -8,6 +8,7 @@ export const site = {
   place: 'Northern Beaches, Sydney, NSW',
   reviewSourceUrl: 'https://antonsplumbingandgas.com.au/suburb/plumber-north-kellyville/',
   availability: '24/7 available',
+  defaultSocialImage: '/images/team-fleet-wide.webp',
 } as const;
 
 export type Faq = { question: string; answer: string };
@@ -17,7 +18,7 @@ export const services = [
   {
     slug: 'emergency-plumber', name: 'Emergency Plumber', short: 'Urgent Faults', keyword: 'Emergency plumber Northern Beaches',
     image: '/images/service-truck-action.webp', imageSmall: '/images/service-truck-action-720.webp', alt: 'Antons plumber preparing drain equipment on a blue plumbing service vehicle',
-    title: 'Emergency Plumber Northern Beaches | Antons', description: 'Call about urgent leaks, overflows and plumbing failures across the Northern Beaches. We review the fault, address, access and current availability.',
+    title: 'Emergency Plumber Northern Beaches | Urgent Plumbing', description: 'Call Antons about burst pipes, overflows, urgent leaks and plumbing failures across the Northern Beaches. Available 24/7 to review your enquiry.',
     intro: 'A burst pipe, overflowing fixture or unsafe plumbing fault needs calm, practical action. Tell us what is happening, where the water is moving and whether the supply can be isolated.',
     overview: 'Emergency plumbing starts with limiting risk, identifying the affected service and deciding what needs attention first. The plumber checks accessible pipework, fixtures and isolation points before discussing a safe repair path.',
     signs: ['Water spreading from a burst or damaged pipe', 'An overflowing toilet, drain or fixture', 'A failed isolation valve or uncontrolled water flow', 'A leaking hot-water unit or suspected gas concern'],
@@ -33,7 +34,7 @@ export const services = [
   {
     slug: 'blocked-drains', name: 'Blocked Drains', short: 'Drain Clearing', keyword: 'Blocked drains Northern Beaches',
     image: '/images/drain-camera-inspection.webp', imageSmall: '/images/drain-camera-inspection-720.webp', alt: 'Drain camera equipment beside an outdoor inspection opening',
-    title: 'Blocked Drains Northern Beaches | Antons', description: 'Get practical help with blocked sinks, toilets and drains across the Northern Beaches, including clearing and camera inspection where suitable.',
+    title: 'Blocked Drains Northern Beaches | Drain Clearing', description: 'Blocked sink, toilet or outside drain? Arrange professional drain clearing, water jetting and CCTV inspection across Sydney’s Northern Beaches.',
     intro: 'Slow fixtures, gurgling sounds and repeat backups can point to a restriction deeper in the line. We start with the symptoms, affected fixtures and accessible drain points.',
     overview: 'Blocked drain work involves locating the affected section, understanding whether the restriction is local or recurring and selecting a clearing method suited to the pipework. A camera inspection may help where the condition of an accessible line needs review.',
     signs: ['Water draining slowly from sinks or showers', 'Gurgling sounds from nearby fixtures', 'Repeated toilet or floor-waste backups', 'Overflowing gullies or unpleasant drain odours'],
@@ -49,7 +50,7 @@ export const services = [
   {
     slug: 'hot-water-systems', name: 'Hot Water Systems', short: 'Hot Water', keyword: 'Hot water repairs Northern Beaches',
     image: '/images/hot-water-repair.webp', imageSmall: '/images/hot-water-repair-720.webp', alt: 'Antons plumber repairing pipework on an outdoor hot-water system',
-    title: 'Hot Water Repairs Northern Beaches | Antons', description: 'Arrange hot-water fault diagnosis, repair or replacement planning across the Northern Beaches for electric, gas and heat-pump systems.',
+    title: 'Hot Water Systems Northern Beaches | Repairs & Advice', description: 'Arrange hot-water system fault diagnosis, repairs and replacement planning for electric, gas and heat-pump units across the Northern Beaches.',
     intro: 'No hot water, temperature changes, leaks or unusual system noise should be assessed before repair or replacement is chosen. The unit, installation and household demand all matter.',
     overview: 'Hot-water plumbing covers the valves, pipework and systems that heat and distribute water. The right response depends on the energy source, unit condition, available space, household demand and whether repair remains practical.',
     signs: ['No hot water or inconsistent temperature', 'Water leaking around the unit or valves', 'Unusual noise, pressure or discoloured water', 'A system that repeatedly trips or shuts down'],
@@ -65,7 +66,7 @@ export const services = [
   {
     slug: 'plumbing-repairs', name: 'Plumbing Repairs', short: 'Everyday Repairs', keyword: 'Plumbing repairs Northern Beaches',
     image: '/images/shower-repair.webp', imageSmall: '/images/shower-repair-720.webp', alt: 'Antons plumber completing plumbing work inside a tiled shower',
-    title: 'Plumbing Repairs Northern Beaches | Antons', description: 'Book plumbing repairs for leaking taps, toilets, showers, pipework and household fixtures throughout Sydney’s Northern Beaches.',
+    title: 'Plumbing Repairs Northern Beaches | Licensed Plumber', description: 'Book a licensed Northern Beaches plumber for leaking taps, toilets, showers, damaged pipework and everyday household plumbing repairs.',
     intro: 'Everyday plumbing faults are easier to resolve when the cause is assessed before parts are replaced. We explain the fault, practical options and agreed scope of work.',
     overview: 'General plumbing repairs restore the fixtures, valves and pipework used throughout a property. A careful assessment separates a worn component from wider supply, pressure or drainage problems.',
     signs: ['Taps, showers or toilets that continue to leak', 'Low pressure at one or more fixtures', 'Water marks around cabinets, walls or floors', 'Noisy, loose or unreliable plumbing fixtures'],
@@ -81,7 +82,7 @@ export const services = [
   {
     slug: 'gas-fitting', name: 'Gas Fitting', short: 'Licensed Gas Work', keyword: 'Gas fitting Northern Beaches',
     image: '/images/service-truck-rear.webp', imageSmall: '/images/service-truck-rear-720.webp', alt: 'Rear of an Antons service vehicle displaying gas fitting among its services',
-    title: 'Gas Fitting Northern Beaches | Antons', description: 'Arrange licensed gas fitting for appliance connections, gas hot-water systems and suspected gas faults across Sydney’s Northern Beaches.',
+    title: 'Gas Fitter Northern Beaches | Licensed Gas Plumbing', description: 'Arrange licensed gas fitting across the Northern Beaches for appliance connections, gas hot-water systems, pipework alterations and suspected faults.',
     intro: 'Gas work must be handled by an appropriately licensed professional. If you suspect a leak, move away, avoid flames and electrical switches, then call for advice.',
     overview: 'Gas fitting covers regulated work on gas pipework, appliance connections and related systems. The installation and scope are checked before work begins, with applicable testing completed before equipment is returned to service.',
     signs: ['A suspected gas smell near an appliance or line', 'An appliance connection that needs alteration', 'A gas hot-water system with supply concerns', 'Planned kitchen or appliance replacement work'],
@@ -97,7 +98,7 @@ export const services = [
   {
     slug: 'leak-detection', name: 'Leak Detection', short: 'Find Hidden Leaks', keyword: 'Leak detection Northern Beaches',
     image: '/images/stormwater-repair.webp', imageSmall: '/images/stormwater-repair-720.webp', alt: 'Antons plumber inspecting pipework through an outdoor drainage opening',
-    title: 'Leak Detection Northern Beaches | Antons', description: 'Investigate unexplained water use, damp areas and suspected hidden leaks with a licensed plumbing team serving the Northern Beaches.',
+    title: 'Leak Detection Northern Beaches | Find Hidden Leaks', description: 'Investigate hidden water leaks, damp areas, pressure loss and unexplained water use with licensed plumbers serving the Northern Beaches.',
     intro: 'A hidden leak may appear as dampness, movement on the meter, reduced pressure or an unexpected water bill. Useful testing depends on the symptoms and accessible plumbing.',
     overview: 'Leak detection narrows unexplained water loss before unnecessary surfaces are disturbed. Evidence from the meter, isolation, pressure, moisture and accessible pipework identifies the most useful next inspection or repair step.',
     signs: ['Unexpected movement on the water meter', 'Damp patches, mould or unexplained moisture', 'Reduced pressure without an obvious fixture fault', 'An unusually high water bill or running-water sound'],
@@ -171,6 +172,23 @@ const areaHeroHooks = {
   'avalon-beach': 'Licensed plumbing help for Avalon Beach coastal homes, apartments and leafy sloping blocks. We plan for distance from parking, gates and subfloor access, then agree on a practical repair scope.',
 } as const;
 
+const areaSeoDescriptions = {
+  manly: 'Need a licensed plumber in Manly NSW 2095? Call Antons for blocked drains, hot water, leaks, gas fitting and practical plumbing repairs.',
+  'dee-why': 'Need a plumber in Dee Why NSW 2099? Antons assists apartments, strata properties, shops and homes with drains, hot water, leaks and repairs.',
+  brookvale: 'Licensed plumber in Brookvale NSW 2100 for homes, apartments, retail and commercial sites. Call Antons about drains, hot water, gas and repairs.',
+  freshwater: 'Call a licensed plumber in Freshwater NSW 2096 for blocked drains, leaking fixtures, hot water, gas fitting and practical household repairs.',
+  'curl-curl': 'Need a plumber in Curl Curl NSW 2096? Antons provides licensed help with drainage, leaks, hot water, gas fitting and plumbing repairs.',
+  narrabeen: 'Licensed plumber in Narrabeen NSW 2101 for lakeside homes, apartments and local businesses. Call about drains, hot water, leaks and repairs.',
+  collaroy: 'Call a licensed plumber in Collaroy NSW 2097 for hillside homes and apartments, including blocked drains, hot water, leaks, gas and repairs.',
+  'mona-vale': 'Need a plumber in Mona Vale NSW 2103? Antons assists homes, apartments, medical and retail premises with drains, hot water, leaks and repairs.',
+  warriewood: 'Licensed plumber in Warriewood NSW 2102 for estates, apartments, businesses and established homes. Call about drains, hot water and repairs.',
+  'frenchs-forest': 'Call a licensed plumber in Frenchs Forest NSW 2086 for blocked drains, leaks, hot water, gas fitting and repairs in homes and local premises.',
+  forestville: 'Need a plumber in Forestville NSW 2087? Antons provides licensed help with drains, leaks, hot water, gas fitting and household plumbing repairs.',
+  belrose: 'Licensed plumber in Belrose NSW 2085 for homes, retirement living, retail and light-commercial properties. Call about drains, leaks and repairs.',
+  newport: 'Call a licensed plumber in Newport NSW 2106 for coastal homes and apartments, including blocked drains, hot water, leaks, gas and repairs.',
+  'avalon-beach': 'Need a plumber in Avalon Beach NSW 2107? Antons provides licensed help with drains, hot water, leaks, gas fitting and practical plumbing repairs.',
+} as const;
+
 export const areas = rawAreas.map(([slug, name, postcode, coords, image, alt, neighbours, intro, context]) => {
   const [processImage, processAlt] = areaProcessMedia[slug];
   return {
@@ -178,8 +196,8 @@ export const areas = rawAreas.map(([slug, name, postcode, coords, image, alt, ne
     image: `/images/${image}.webp`, imageSmall: `/images/${image}-720.webp`, alt, neighbours, intro, context,
     processImage: `/images/${processImage}.webp`, processImageSmall: `/images/${processImage}-720.webp`, processAlt,
     hook: areaHeroHooks[slug],
-    title: `Plumber ${name} NSW ${postcode} | Northern Beaches`,
-    description: `Call about plumbing in ${name} NSW ${postcode}: blocked drains, hot water, leaks, gas fitting and repairs. Confirm coverage for your address.`,
+    title: `Plumber ${name} NSW ${postcode} | Antons Plumbing`,
+    description: areaSeoDescriptions[slug],
     faqs: areaFaqs(name),
   };
 });

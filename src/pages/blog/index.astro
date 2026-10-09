@@ -6,7 +6,7 @@ import { services } from '../../data/site';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 const formatDate = (date: Date) => new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
 ---
-<BaseLayout title="Northern Beaches Plumbing Advice & Guides" description="Read practical Northern Beaches plumbing guides about blocked drains, leaks, hot-water systems, gas work and caring for household plumbing." canonicalPath="/blog/">
+<BaseLayout title="Northern Beaches Plumbing Advice | Antons" description="Read practical Northern Beaches plumbing guides about blocked drains, water leaks, hot-water systems, gas work and household plumbing repairs." canonicalPath="/blog/">
   <nav class="breadcrumbs wrap" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Blog</span></nav>
   <section class="blog-hero"><div class="wrap"><h1>Northern Beaches Plumbing Advice</h1><p>Clear guidance about common plumbing symptoms, property access and the questions worth asking before repair work begins.</p></div></section>
   <section class="blog-index wrap" aria-labelledby="articles-title">
